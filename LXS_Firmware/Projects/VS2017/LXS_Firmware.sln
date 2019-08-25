@@ -1,35 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LXS_Firmware", "LXS_Firmware.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "APA102-3.0.0", "..\..\..\..\..\Arduino\libraries\APA102\APA102-3.0.0.vcxitems", "{627C900A-1562-49F6-ABA3-FA043669BD18}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FastGPIO-2.1.0", "..\..\..\..\..\Arduino\libraries\FastGPIO\FastGPIO-2.1.0.vcxitems", "{7922D459-DB6B-422D-88BB-B150468611EC}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCDKeypad-1.1.0", "..\..\..\..\..\Arduino\libraries\LCDKeypad\LCDKeypad-1.1.0.vcxitems", "{14AB0C46-769D-427E-AB28-C4166D2D043E}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LiquidCrystal-1.0.7", "..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\LiquidCrystal\LiquidCrystal-1.0.7.vcxitems", "{80BCC323-41EB-4337-A9B6-6A2C68232BF8}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MIDI_Library-4.3.1", "..\..\..\..\..\Arduino\libraries\MIDI_Library\MIDI_Library-4.3.1.vcxitems", "{E64E9A0F-99D7-443C-A803-C4E23F75D5A1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SoftwareSerial-1.0", "..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial-1.0.vcxitems", "{93B6A046-5587-4BAC-8D39-0491222B07BB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LiquidCrystal-1.0.7", "..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\teensy\avr\libraries\LiquidCrystal\LiquidCrystal-1.0.7.vcxitems", "{C7C3F779-0A2C-4EF4-AD00-E9D813D58F4B}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\..\..\..\..\Arduino\libraries\LCDKeypad\LCDKeypad-1.1.0.vcxitems*{14ab0c46-769d-427e-ab28-c4166d2d043e}*SharedItemsImports = 9
 		..\..\..\..\..\Arduino\libraries\APA102\APA102-3.0.0.vcxitems*{627c900a-1562-49f6-aba3-fa043669bd18}*SharedItemsImports = 9
-		..\..\..\..\..\Arduino\libraries\FastGPIO\FastGPIO-2.1.0.vcxitems*{7922d459-db6b-422d-88bb-b150468611ec}*SharedItemsImports = 9
-		..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\LiquidCrystal\LiquidCrystal-1.0.7.vcxitems*{80bcc323-41eb-4337-a9b6-6a2c68232bf8}*SharedItemsImports = 9
-		..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial-1.0.vcxitems*{93b6a046-5587-4bac-8d39-0491222b07bb}*SharedItemsImports = 9
-		..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial-1.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
-		..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries\LiquidCrystal\LiquidCrystal-1.0.7.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\teensy\avr\libraries\LiquidCrystal\LiquidCrystal-1.0.7.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
 		..\..\..\..\..\Arduino\libraries\APA102\APA102-3.0.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
-		..\..\..\..\..\Arduino\libraries\FastGPIO\FastGPIO-2.1.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
-		..\..\..\..\..\Arduino\libraries\LCDKeypad\LCDKeypad-1.1.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
 		..\..\..\..\..\Arduino\libraries\MIDI_Library\MIDI_Library-4.3.1.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		..\..\..\..\..\..\..\..\Program Files (x86)\Arduino\hardware\teensy\avr\libraries\LiquidCrystal\LiquidCrystal-1.0.7.vcxitems*{c7c3f779-0a2c-4ef4-ad00-e9d813d58f4b}*SharedItemsImports = 9
 		..\..\..\..\..\Arduino\libraries\MIDI_Library\MIDI_Library-4.3.1.vcxitems*{e64e9a0f-99d7-443c-a803-c4e23f75d5a1}*SharedItemsImports = 9
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
