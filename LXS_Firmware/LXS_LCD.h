@@ -9,9 +9,8 @@
 #if LXS_HAS_LCD
 
 #include <LiquidCrystal.h>
-#include <LCDKeypad.h>
 
-class LXS_LCD : public LCDKeypad
+class LXS_LCD : public LiquidCrystal
 {
 public:
 	LXS_LCD();
@@ -25,6 +24,10 @@ public:
 private:
 	uint8 curCol;
 	uint8 curRow;
+
+#if LXS_LCD_PULSE
+	uint8* curPulseFramePtr;
+#endif
 };
 
 #endif /* LXS_HAS_LCD */

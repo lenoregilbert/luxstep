@@ -9,7 +9,7 @@ extern uint8 LXS_PulseBitmaps[];
 extern const uint32 LXS_PulseBitmapFrameMasks[];
 
 #define LXS_PulseBitmap_FrameRateMicroSeconds LXSMILLISECONDSTOMICROSECONDS(4250) // 
-#define LXS_PulseBitmap_FrameCount 18 // 16 Frames
+#define LXS_PulseBitmap_FrameCount 17 // 17 Frames
 #define LXS_PulseBitmap_FrameStride 8 // 8 Bytes Per Frame
 #define LXS_PulseBitmap_Blank 0
 #define LXS_PulseBitmap_Char 1

@@ -1,7 +1,5 @@
 #include "LXS_App.h"
 
-//SoftwareSerial softSerial(50, 51);
-//MIDI_CREATE_INSTANCE(SoftwareSerial, softSerial, midiA);
 static MIDI_CREATE_INSTANCE(HardwareSerial, Serial1, midiA);
 
 LXS_Clock LXS_App::clock;
@@ -61,8 +59,6 @@ bool LXS_App::Tick()
 	sequence.tick(clock);
 
 #if LXS_HAS_LCD
-	lcd.tick(clock);
-
 #if LXS_LCD_DEBUG
 	debugScreen.tick(clock);
 
@@ -71,6 +67,10 @@ bool LXS_App::Tick()
 		debugScreen.update(sequence.noteList);
 	}
 #endif
+	else
+	{
+		lcd.tick(clock);
+	}
 #endif
 
 #if LXS_HAS_LEDSTRIP

@@ -1,13 +1,16 @@
 #ifndef _LXS_CONFIG_H_
 #define _LXS_CONFIG_H_
 
-#define LXS_HAS_DEBUGGER 1
-
 #define LXS_HAS_LCD 1
 
 #if LXS_HAS_LCD
+#define LXS_LCD_PINS 8, 9, 4, 5, 6, 7
+
 #define LXS_LCD_DEBUG 1
+#define LXS_LCD_PULSE 1
 #endif
+
+#define LXS_USE_FASTGPIO 0
 
 #define LXS_DEBUGPRINT 1
 
@@ -18,8 +21,8 @@
 #define LXS_HAS_LEDSTRIP 1
 
 #if LXS_HAS_LEDSTRIP
-#define LXS_LED_CLOCKPIN 2
-#define LXS_LED_DATAPIN 3
+#define LXS_LED_CLOCKPIN 13
+#define LXS_LED_DATAPIN 12
 #define LXS_LED_COUNT 18
 #define LXS_LED_BRIGHTNESS 10
 #endif

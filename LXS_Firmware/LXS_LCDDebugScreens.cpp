@@ -15,26 +15,7 @@ void LXS_LCDDebugScreen_ActiveNotes::init()
 
 bool LXS_LCDDebugScreen_ActiveNotes::tick(const LXS_Clock& inClock)
 {
-	if(LXS_LCD::tick(inClock))
-	{
-#if 0
-		lcd->setCursor(0, 0);
-		lcd->print(LXS_PSM::psmStates[4], BIN);
-#elif 0
-		lcd->setCursor(3, 0);
-		lcd->print(LXS_PSM::psmStates[1], HEX);
-		lcd->setCursor(6, 0);
-		lcd->print(LXS_PSM::psmStates[2], HEX);
-		lcd->setCursor(9, 0);
-		lcd->print(LXS_PSM::psmStates[3], HEX);
-		lcd->setCursor(12, 0);
-		lcd->print(LXS_PSM::psmStates[4], HEX);
-#endif
-
-		return true;
-	}
-
-	return false;
+	return true;
 }
 
 void LXS_LCDDebugScreen_ActiveNotes::update(const LXS_NoteList& note)

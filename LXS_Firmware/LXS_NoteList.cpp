@@ -165,7 +165,6 @@ void LXS_NoteList::release(const uint32 inMicros, const uint8 inChannel, const u
 	while (cell)
 	{
 		Cell* prev = cell->prev;
-		Cell* next = cell->next;
 
 		if (cell->note.channel == inChannel || cell->note.pitch == inPitch)
 		{

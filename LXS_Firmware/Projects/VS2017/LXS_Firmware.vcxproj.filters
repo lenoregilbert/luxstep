@@ -31,7 +31,6 @@
       <Filter>Modules</Filter>
     </ClInclude>
     <ClInclude Include="..\..\LXS_App.h" />
-    <ClInclude Include="__vm\.LXS_Firmware.vsarduino.h" />
     <ClInclude Include="..\..\LXS_Sequence.h">
       <Filter>Modules</Filter>
     </ClInclude>
@@ -47,6 +46,7 @@
     <ClInclude Include="..\..\LXS_NoteList.h">
       <Filter>Modules</Filter>
     </ClInclude>
+    <ClInclude Include="__vm\.LXS_Firmware.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\LXS_Constants.cpp">

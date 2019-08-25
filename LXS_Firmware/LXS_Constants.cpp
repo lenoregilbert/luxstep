@@ -167,7 +167,7 @@ uint8 LXS_PulseBitmaps[] = {
 	0b00000,
 };
 
-const uint32 LXS_PulseBitmapFrameThresholds[LXS_PulseBitmap_FrameCount] = {
+const uint32 LXS_PulseBitmapFrameThresholds[LXS_PulseBitmap_FrameCount + 1] = {
 	0,
 	250,
 	500,
@@ -191,7 +191,7 @@ const uint32 LXS_PulseBitmapFrameThresholds[LXS_PulseBitmap_FrameCount] = {
 uint8 LXS_PulseBitmapGetFrameIdx(uint32 microseconds)
 {
 	uint32 milliseconds = LXS_MICROSECONDSTOMILLISECONDS(microseconds);
-	milliseconds %= (LXS_PulseBitmapFrameThresholds[LXS_PulseBitmap_FrameCount - 1] + 1);
+	milliseconds %= (LXS_PulseBitmapFrameThresholds[LXS_PulseBitmap_FrameCount]);
 
 	uint8 frameIdx = 0;
 

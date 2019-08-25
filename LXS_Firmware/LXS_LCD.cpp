@@ -3,7 +3,7 @@
 #if LXS_HAS_LCD
 
 LXS_LCD::LXS_LCD()
-	: LCDKeypad()
+	: LiquidCrystal(LXS_LCD_PINS)
 	, curCol(0)
 	, curRow(0)
 {
@@ -17,7 +17,8 @@ void LXS_LCD::init()
 	display();
 
 #if LXS_LCD_PULSE
-	createChar(LXS_PulseBitmap_Blank, LXS_PulseBitmapGetFramePtr(0));
+	curPulseFramePtr = LXS_PulseBitmapGetFramePtr(0);
+	createChar(LXS_PulseBitmap_Blank, curPulseFramePtr);
 #endif
 
 	clear();
@@ -26,7 +27,13 @@ void LXS_LCD::init()
 bool LXS_LCD::tick(const LXS_Clock& inClock)
 {
 #if LXS_LCD_PULSE
-	createChar(LXS_PulseBitmap_Char, LXS_PulseBitmapGetFramePtr(inClock.systemTime.microseconds));
+	uint8* curFrame = LXS_PulseBitmapGetFramePtr(inClock.systemTime.microseconds);
+
+	if (curFrame != curPulseFramePtr)
+	{
+		curPulseFramePtr = curFrame;
+		createChar(LXS_PulseBitmap_Char, curPulseFramePtr);
+	}
 
 	setCursor(15, 1);
 	write(uint8(LXS_PulseBitmap_Char));
@@ -40,14 +47,15 @@ void LXS_LCD::clear()
 	curCol = 0;
 	curRow = 0;
 
-	LCDKeypad::clear();
+	LiquidCrystal::clear();
 }
 
 uint8 LXS_LCD::print(const String& inString)
 {
 	setCursor(curCol, curRow);
 
-	curCol += LCDKeypad::print(inString);
+	uint8 count = LiquidCrystal::print(inString);
+	curCol += count;
 
 	if (curCol >= 12)
 	{
@@ -60,6 +68,8 @@ uint8 LXS_LCD::print(const String& inString)
 			curRow = 0;
 		}
 	}
+
+	return count;
 }
 
 

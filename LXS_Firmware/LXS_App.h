@@ -6,11 +6,12 @@
 
 #include <MIDI.h>
 #include <HardwareSerial.h>
-#include <SoftwareSerial.h>
 
 #if LXS_HAS_LEDSTRIP
+#if LXS_USE_FASTGPIO
 #include <FastGPIO.h>
 #define APA102_USE_FAST_GPIO
+#endif
 #include <APA102.h>
 #endif
 
